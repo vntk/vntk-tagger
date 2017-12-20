@@ -59,5 +59,6 @@ typings/
 
 #app
 model*.bin
+test*.js
 log*.txt
 _*
