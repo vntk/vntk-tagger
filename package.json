@@ -1,0 +1,33 @@
+{
+  "name": "@vntk/tagger",
+  "version": "1.0.0",
+  "description": "Vietnamese Named Entity Recognition Tool",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vntk/vntk-tagger.git"
+  },
+  "keywords": [
+    "named-entity-recognition",
+    "vietnamese",
+    "vntk"
+  ],
+  "author": "vunb",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vntk/vntk-tagger/issues"
+  },
+  "homepage": "https://github.com/vntk/vntk-tagger#readme",
+  "dependencies": {
+    "@vntk/dictionary": "^1.0.0",
+    "@vntk/conlleval": "github:vntk/conlleval#master",
+    "crfsuite": "^0.9.3",
+    "lodash": "^4.17.4",
+    "named-tuple": "^0.1.1",
+    "title-case": "^2.1.1",
+    "vntk": "^1.2.0"
+  }
+}
