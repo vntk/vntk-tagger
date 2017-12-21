@@ -4,7 +4,10 @@
   "description": "Vietnamese Named Entity Recognition Tool",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "train": "node experiment",
+    "evaluation": "node evaluation",
+    "start": "npm run train",
+    "test": "npm run evaluation"
   },
   "repository": {
     "type": "git",
