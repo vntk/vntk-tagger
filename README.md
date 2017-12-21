@@ -2,6 +2,8 @@
 
 Vietnamese Named Entity Recognition Tool
 
+[![Join the chat at https://gitter.im/vntk/vntk-tagger](https://badges.gitter.im/vntk/vntk-tagger.svg)](https://gitter.im/vntk/vntk-tagger)
+
 Install using npm:
 
 > npm install -g @vntk/tagger
