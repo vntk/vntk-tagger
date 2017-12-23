@@ -25,8 +25,9 @@
   },
   "homepage": "https://github.com/vntk/vntk-tagger#readme",
   "dependencies": {
-    "@vntk/dictionary": "^1.0.0",
     "@vntk/conlleval": "github:vntk/conlleval#master",
+    "@vntk/dictionary": "^1.0.0",
+    "async": "^2.6.0",
     "crfsuite": "^0.9.3",
     "lodash": "^4.17.4",
     "named-tuple": "^0.1.1",

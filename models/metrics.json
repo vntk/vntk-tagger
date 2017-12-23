@@ -3,11 +3,11 @@
     "number_of_tokens": 66097,
     "number_of_correct_phrase": 2996,
     "number_of_guessed_phrase": 2959,
-    "number_of_correct_guessed_phrase": 5492,
+    "number_of_correct_guessed_phrase": 2709,
     "accuracy": 99.50073377006521,
-    "precision": 185.6032443393038,
-    "recall": 183.31108144192257,
-    "f_measure": 184.45004198152816
+    "precision": 91.55119972963838,
+    "recall": 90.42056074766354,
+    "f_measure": 90.98236775818638
   },
   "per_class": {
     "PER": {

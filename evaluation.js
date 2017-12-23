@@ -1,6 +1,7 @@
 const _ = require('lodash');
 const fs = require('fs');
 const path = require('path');
+const async = require('async');
 const crfsuite = require('crfsuite');
 const conlleval = require('@vntk/conlleval');
 const iobParser = require('./lib/iob');
@@ -58,11 +59,31 @@ test_sents.forEach((sent, index) => {
 
 // run conlleval
 
-let tokens = _.flatten(diff);
+// let tokens = _.flatten(diff);
 
-let counts = conlleval.evaluate(tokens);
-let metrics = conlleval.get_metrics(counts);
+let fn = './models/diff.txt';
 
-fs.writeFile('./models/metrics.json', JSON.stringify(metrics, null, 2));
+let writeFile = new Promise((resolve, reject) => {
+    let stream = fs.createWriteStream(fn);
+    console.log('Write different.txt');
 
-console.log('Evaluation done!');
+    async.each(diff, (sent, cb1) => {
+        async.each(sent, (token, cb2) => {
+            let data = `${token.join('\t')}\n`;
+            stream.write(data, 'utf8', cb2);
+        }, cb1);
+    }, (err) => {
+        stream.end();
+    });
+
+    stream.on('finish', resolve);
+    stream.on('error', reject);
+});
+
+writeFile.then(() => {
+    let metrics = conlleval.measure_performance(fn, '\t');
+
+    fs.writeFile('./models/metrics.json', JSON.stringify(metrics, null, 2));
+    
+    console.log('Evaluation done!');
+});
