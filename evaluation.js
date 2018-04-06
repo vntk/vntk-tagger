@@ -83,7 +83,7 @@ let writeFile = new Promise((resolve, reject) => {
 writeFile.then(() => {
     let metrics = conlleval.measure_performance(fn, '\t');
 
-    fs.writeFile('./models/metrics.json', JSON.stringify(metrics, null, 2));
+    fs.writeFileSync('./models/metrics.json', JSON.stringify(metrics, null, 2));
     
     console.log('Evaluation done!');
 });
