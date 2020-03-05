@@ -62,3 +62,5 @@ model*.bin
 test*.js
 log*.txt
 _*
+test/models
+package-lock.json
