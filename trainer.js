@@ -1,6 +1,6 @@
 'use strict';
 const path = require('path');
-const crfsuite = require('crfsuite');
+const crfsuite = require('vntk/lib/crfsuite');
 const iobParser = require('./lib/iob');
 const features = require('./lib/features');
 
